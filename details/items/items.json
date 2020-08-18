@@ -1,0 +1,55 @@
+var data = {
+    items: [
+        
+        {
+        "linens": [
+            {
+            "kind": "king of linen",
+            "img": "image url",
+            "description": "description"
+            },
+            
+            {
+            "kind": "linen2",
+            "img": "image url2",
+            "description": "description"
+            }
+        ]
+        },
+        
+        
+        {        
+        "dinnerware": [
+            
+        ]
+        },
+        
+        
+        {
+        "silverware": [
+            
+        ]
+        },
+        
+        
+        {
+        "vases": [
+            {
+            "kind": "gold vase",
+            "img": "../images/vases/longgoldvase.jpg",
+            "description": "long gold vase. brand here"
+            },
+            {
+            "kind": "Clear vase",
+            "img": "../images/vases/abstractvase.jpg",
+            "description": "Clear, abstract water vase."
+            },
+            {
+            "kind": "Kings Crown",
+            "img": "../images/vases/kingscrownvases.jpg",
+            "description": "Golden wooden crownshaped vases"
+            }
+        ]
+        }
+    ]
+}

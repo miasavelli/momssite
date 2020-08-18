@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vases</title>
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="items.json"></script>
+</head>
+
+<body>
+    <p>hi</p>
+        <div style='align-content: center; text-align: center; text-decoration-style: double;' id="vases"></div>
+    <p>vase here</p>
+    
+</body>
+</html>
+<script>
+
+    var itemdata = JSON.parse(data);
+    var obj = JSON.parse(itemdata);
+    var vaselength = 2;
+    
+    for (var i = 0; i < vaselength; i++) {
+    
+        document.getElementById("vases").innerHTML += obj.items["1"];
+    
+    
+//    + "<br><br><img src = " + data[i]._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url + "> <br> <div>" + data[i].content.rendered + "</div><br>"; 
+
+     }
+
+    
+</script>

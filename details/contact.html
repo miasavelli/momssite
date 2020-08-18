@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Contact Us!</title>
+      
+      <link rel="stylesheet" href="../css/stylecontact.css">
+            <link href="../images/favicon.ico" rel="icon" type="image/x-icon" />
+
+  </head>
+  <body>
+      
+      
+      <header class="header sticky sticky--top js-header">
+
+  <div class="grid">
+
+    
+<nav class="navigation">
+      <ul class="navigation__list navigation__list--inline">
+          
+        <li class="navigation__item"><a href="../index.html">Home</a></li>
+        
+        <!-- dropdown content -->
+      
+      
+       
+        <div class="dropdown">
+           <li class="dropbtn"><a href="#">Rental Items</a></li>
+          <div class="dropdown-content">
+            <a href="#">Linens</a>
+            <a href="#">Glasses</a>
+            <a href="#">Dinnerware</a>
+            <a href="#">Silverware</a>       
+            <a href="#">Drink Dispensers</a>
+            <a href="#">Floral Containers</a>
+            <a href="#">Lighting</a>
+          </div>
+        </div>   
+        
+        <li class="navigation__item"><a a href="gallery.html">Gallery</a></li>
+          
+          
+        <li class="navigation__item"><a href="" class="is-active">Contact</a></li>
+      </ul>
+    </nav>
+
+  </div>
+
+</header>
+      <br>
+      <br>
+      
+      <br>
+      <br>
+      
+<div id="contact" class="page contact-section">
+<h3>Phone Number 1-229-646-4887 <br> yesidoeventrentals@gmail.com</h3>
+    <form class="contact-form" name="form1" id="form1">
+        <input id="name" type="text" class="ghost-input" placeholder="Name.." required><br>
+        <input id="email" type="text" class="ghost-input" placeholder="Email.." required><br>
+
+        <textarea id="long-input" rows="6" class="ghost-input"
+            placeholder="Subject..." required></textarea><br>
+        
+        <button type="submit" value="Submit" form="form1" id="submit-button" onClick="sendEmail(this.form)">
+            
+            <span id="contact-description">Send</span>
+            <span class="glyphicon glyphicon-send"></span>
+        </button>
+    </form>
+</div>
+      
+      
+  </body>
+    
+    <script src="../sticky.js"></script>
+</html>
+
+<script>
+
+// email sending
+$(document).ready(function () {
+    $("#contact-description").hide();
+    $("#submit-button").hover(function(e) {
+        $("#contact-description").css({
+            position: 'absolute',
+            bottom: "100%",
+            right: "15%"
+        }).stop().show(100);
+    }, function() {
+        $("#contact-description").hide();
+    });
+});
+$(document).on("submit","form", function(e){
+        e.preventDefault();
+        var nameInput = document.getElementById('name').value;
+        var longInput = document.getElementById('long-input').value;
+        var email = document.getElementById('email').value;
+        var formattedInput = "";
+        var mailto = "mailto:yesidoeventrentals@gmail.com";
+        if (nameInput.length != 0) {
+            formattedInput += "Name: %0D%0A" + nameInput + "%0D%0A%0D%0A";
+        }
+        if (email.length != 0) {
+            formattedInput += "Email: %0D%0A" + email + "%0D%0A%0D%0A";
+        }
+        formattedInput += "Message states %0D%0A" + longInput + "%0D%0A%0D%0A";
+
+        window.location.href = (mailto + "?subject=" + nameInput + "'s message from website" + "&body=" + formattedInput);
+});
+
+function sendEmail(){
+    var nameInput = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var longInput = document.getElementById('long-input').value;
+    var formattedInput = "";
+    var mailto = "mailto:yesidoeventrentals@gmail.com";
+    if (nameInput.length != 0) {
+        formattedInput += "Name: %0D%0A" + nameInput + "%0D%0A%0D%0A";
+    }
+    if (email.length != 0) {
+        formattedInput += "Email: %0D%0A" + email + "%0D%0A%0D%0A";
+    }
+    formattedInput += "Subject: %0D%0A" + longInput+"%0D%0A%0D%0A";
+
+    window.location.href = (mailto + "?subject=" + nameInput + " - Event Rentals" + "&body=" + formattedInput);
+}
+</script>
