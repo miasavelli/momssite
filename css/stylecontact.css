@@ -1,0 +1,199 @@
+@use postcss-cssnext;
+.dropbtn {
+  color: white;
+  font-size: 16px;
+  border: none;
+    text-align: center;
+    justify-content: center;
+  margin: 0.5em;
+}
+.w3-right {
+}
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #53bbce;}
+
+/* helpers/grid.css */
+.grid {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 48em;
+  width: 90%;
+}
+
+/* helpers/sticky.css */
+
+.sticky {
+  position: sticky;
+  will-change: transform;
+}
+
+.sticky--top {
+  top: 0;
+}
+
+/* layout/base.css */
+
+* {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.75;
+  margin: 0;
+  min-height: 100%;
+}
+
+/* layout/header.css */
+
+.header {
+  background-color: #53bbce;
+  padding-bottom: 1em;
+  padding-top: 1em;
+}
+
+
+.header::after {
+  bottom: 0;
+  box-shadow: 0 0.0625em 0.5em rgba(0, 0, 0, 0.3);
+  content: '';
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: opacity 0.3s;
+  z-index: -1;
+}
+
+.header.is-active::after {
+  opacity: 1;
+}
+
+/* layout/main.css */
+
+.main {
+  padding-top: 6em;
+  padding-bottom: 6em;
+}
+
+/* modules/headline.css */
+
+h3 {
+  margin-bottom: 1.5em;
+  margin-top: 0;
+    text-align: center;
+}
+
+/* modules/navigation.css */
+
+.navigation a {
+  color: inherit;
+  display: block;
+  text-decoration: none;
+}
+
+.navigation .is-active {
+  background-color: #000;
+  color: #fff;
+  padding-left: 1em;
+  padding-right: 1em;
+  border-radius: 999px;
+}
+
+.navigation__list {
+  list-style: none;
+  margin: -0.5em;
+  padding: 0;
+}
+
+.navigation__list--inline {
+  display: flex;
+}
+
+.navigation__item {
+  margin: 0.5em;
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */  
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+button:hover {
+  background-color: #60a7b4;
+}
+
+/* Add a background color and some padding around the form */
+#contact {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+    max-width: 1000px;
+    text-align: center;
+
+}
+
+          button {
+  background-color: #53bbce;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+          }
+
+.page, .contact-section {
+    margin-left: 10%;
+    margin-right: 10%;
+
+}
+
+/* Just the phone Number */
+p {
+    text-align: center;
+    text-decoration-color: black;
+}
