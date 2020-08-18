@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+      <link rel="stylesheet" href="css/style.css">
+      <link href="/images/favicon.ico" rel="icon" type="image/x-icon" />
+    <title>"I Do" Event Rentals</title>
+  </head>
+  <body>
+      
+      
+<header class="header sticky sticky--top js-header">
+
+  <div class="grid">
+
+    <nav class="navigation">
+      <ul class="navigation__list navigation__list--inline">
+
+        <li class="navigation__item"><a href="#" class="is-active">Home</a></li>
+        
+        <!-- dropdown content -->
+       
+        <div class="dropdown">
+           <li class="dropbtn"><a href="#">Rental Items</a></li>
+          <div class="dropdown-content">
+            <a href="#">Linens</a>
+            <a href="details/items/vases.html">Vases</a>
+            <a href="#">Glasses</a>
+            <a href="#">Dinnerware</a>
+            <a href="#">Silverware</a>       
+            <a href="#">Drink Dispensers</a>
+            <a href="#">Floral Containers</a>
+            <a href="#">Lighting</a>
+            <a href="#"></a>
+            
+          </div>
+        </div>
+        
+        
+        <li class="navigation__item"><a href="details/gallery.html">Gallery</a></li>
+
+        <li class="navigation__item"><a href="details/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+  </div>
+    </header>
+      
+      <div id="banner">  
+      <img src="images/banner.gif">
+      </div>
+      
+      <div id="desc" style="text-align: center;margin: 50px;">
+      Yes I do Event rentals is a rental company based in Tifton, GA. We travel!
+      </div>
+      
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <img src="images/gallery/KDevent.jpeg" style="width:100%; height:500px;">
+    <div class="text">Sorority Event</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="images/gallery/gardenparty.jpg" style="width:100%;height:500px;">
+    <div class="text">Garden Party</div>
+  </div>
+        
+<!--samepic-->
+  <div class="mySlides fade">
+    <img src="images/vases/kingscrownvases.jpg" style="width:100%;height:500px;">
+    <div class="text">Kings & Queens</div>
+  </div>
+    
+  <div class="mySlides fade">
+    <img src="images/gallery/storage.jpg" style="width:100%;height:500px;">
+    <div class="text">Storage</div>
+  </div>
+        
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+</div>
+
+
+
+  
+  </body>
+
+<script src="sticky.js"></script>
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+    </script>
+</html>
+
